@@ -1,15 +1,22 @@
 import random
 
-word_list = ['apple', 'banana', 'orange', 'mango', 'pineapple']
+# List of words for the game
+WORD_LIST = ['apple', 'banana', 'orange', 'mango', 'pineapple']
 
-word = random.choice(word_list)
+# Randomly select a word from the list
+selected_word = random.choice(WORD_LIST)
 
-guess = input("Enter a single letter: ")
+# Get user input
+user_guess = input("Enter a single letter: ")
 
-if len(guess) == 1 and guess.isalpha():
+# Validate user input
+if len(user_guess) == 1 and user_guess.isalpha():
     print("Good guess!")
+    # You can add additional logic to check if the guessed letter is in the selected word
 else:
-    print("Oops! That is not a valid input.")
+    print("Oops! That is not a valid input. Please enter a single letter.")
 
-#print(word_list)
-#print(word)
+# Print the word list and the selected word (for debugging purposes)
+print(f"Word List: {WORD_LIST}")
+print(f"Selected Word: {selected_word}")
+
